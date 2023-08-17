@@ -12,7 +12,10 @@ export function isPhoneNumberValid(phoneNumber: string[]) {
   return numberString.length === 7;
 }
 export function isCityValid(city: string) {
-  return allCities.includes(capitalize(city));
+  return allCities
+    .map((city) => city.toLowerCase())
+    .includes(city.toLowerCase());
+  // return allCities.includes(capitalize(city));
 }
 
 export function isLastNameValid(lastName: string) {

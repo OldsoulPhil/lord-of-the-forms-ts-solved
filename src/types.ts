@@ -20,7 +20,7 @@ export const defaultUser: UserInformation = {
 };
 
 export type TSUserInfo = {
-  getUserInformation: (userInformation: UserInformation) => void;
+  handleUserInformation: (userInformation: UserInformation) => void;
 };
 
 export type InputProps = ComponentProps<"input">;

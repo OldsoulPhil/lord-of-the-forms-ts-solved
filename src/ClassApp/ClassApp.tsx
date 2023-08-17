@@ -6,7 +6,7 @@ import { ProfileInformation } from "../ProfileInformation";
 export class ClassApp extends Component<Record<string, never>, State> {
   state: State = {
     userInformation: null,
-  }
+  };
   render() {
     const { userInformation } = this.state;
 
@@ -14,8 +14,8 @@ export class ClassApp extends Component<Record<string, never>, State> {
       <>
         <h2>Class</h2>
         <ProfileInformation userData={userInformation} />
-        <ClassForm 
-          getUserInformation={(userInformation) => {
+        <ClassForm
+          handleUserInformation={(userInformation) => {
             this.setState({ userInformation: userInformation });
           }}
         />

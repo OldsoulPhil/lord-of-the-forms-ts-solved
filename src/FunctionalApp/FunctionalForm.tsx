@@ -23,7 +23,7 @@ const emailErrorMessage = "Email is Invalid";
 const cityErrorMessage = "City is Invalid";
 const phoneNumberErrorMessage = "Invalid Phone Number";
 
-export const FunctionalForm = ({ getUserInformation }: TSUserInfo) => {
+export const FunctionalForm = ({ handleUserInformation }: TSUserInfo) => {
   const [inputFirstName, setInputFirstName] = useState("");
   const [inputLastName, setInputLastName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
@@ -69,7 +69,7 @@ export const FunctionalForm = ({ getUserInformation }: TSUserInfo) => {
           return;
         }
         setIsSubmitted(false);
-        getUserInformation({
+        handleUserInformation({
           firstName: capitalize(inputFirstName),
           lastName: capitalize(inputLastName),
           email: inputEmail,

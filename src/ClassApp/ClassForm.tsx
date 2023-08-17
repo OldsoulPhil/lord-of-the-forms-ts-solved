@@ -78,7 +78,7 @@ export class ClassForm extends Component<TSUserInfo> {
             return;
           }
           this.setState({ isSubmitted: false });
-          this.props.getUserInformation({
+          this.props.handleUserInformation({
             firstName: capitalize(inputFirstName),
             lastName: capitalize(inputLastName),
             email: inputEmail,
@@ -181,4 +181,3 @@ export class ClassForm extends Component<TSUserInfo> {
     );
   }
 }
-
